@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Suggested movies</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Poster</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Vote average</th>
+        <th scope="col">Adult</th>
+        <th scope="col">Country</th>
+        <th scope="col">Description</th>
+        <th scope="col">Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="suggestedMovie : ${suggestedMovies}">
+        <td th:text="${suggestedMovie.title}"/>
+        <td th:text="${suggestedMovie.poster}"/>
+        <td th:text="${suggestedMovie.releaseDate}"/>
+        <td th:text="${suggestedMovie.voteAverage}"/>
+        <td th:text="${suggestedMovie.ageGroup}"/>
+        <td th:text="${suggestedMovie.country}"/>
+        <td th:text="${suggestedMovie.description}"/>
+        <td th:text="${suggestedMovie.rating}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

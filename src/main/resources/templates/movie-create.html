@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Create</title>
+</head>
+<body>
+<form method="post" th:action="@{/save}" th:object="${emptyMovie}">
+
+    <label>
+        Title:
+        <input type="text" th:field="*{title}"/>
+    </label>
+
+    <label>
+        Poster:
+        <input type="text" th:field="*{poster}"/>
+    </label>
+
+    <label>
+        Release date:
+        <input type="text" th:field="*{releaseDate}"/>
+    </label>
+
+    <label>
+        Vote average:
+        <input type="text" th:field="*{voteAverage}"/>
+    </label>
+
+    <label>
+        Adult:
+        <input type="text" th:field="*{ageGroup}"/>
+    </label>
+    <label>
+        Country:
+        <input type="text" th:field="*{country}"/>
+    </label>
+
+    <label>
+        Description:
+        <input type="text" th:field="*{description}"/>
+    </label>
+
+    <label>
+        Rating:
+        <input type="text" th:field="*{rating}"/>
+    </label>
+
+    <button type="submit">Add Movie</button>
+
+</form>
+
+</body>
+</html>
